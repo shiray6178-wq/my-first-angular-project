@@ -1,0 +1,11 @@
+<h1>המשימות של {{ user().name }}</h1>
+<button class="add-task-btn" type="button">הוספת משימה חדשה</button>
+<ul class="task-list">
+  @for (task of userTasks(); track task.id) {
+    <li class="task-item">
+      <app-task [task]="task" />
+    </li>
+  } @empty {
+    <li class="task-empty">אין משימות עדיין</li>
+  }
+</ul>

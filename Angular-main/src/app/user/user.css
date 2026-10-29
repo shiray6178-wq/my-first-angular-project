@@ -1,0 +1,48 @@
+.user-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 54px;
+  gap: 12px;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #354158;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.user-btn:hover {
+  border-color: #dce5f8;
+  background-color: #f5f8ff;
+}
+
+.user-btn:focus-visible {
+  outline: 3px solid rgba(47, 105, 235, 0.3);
+  outline-offset: 2px;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #eef3fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border: 1px solid #dfe6f1;
+}
+
+.user-name {
+  font-weight: 600;
+}
+
+.user-btn.selected {
+  background-color: #e8e6eb; 
+  border-color: #1319c7;   
+}

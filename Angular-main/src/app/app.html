@@ -1,0 +1,20 @@
+<app-header></app-header>
+
+<main class="workspace">
+  @if (selectedUser(); as selectedUser) {
+    <app-tasks [user]="selectedUser" [tasks]="tasks()" />
+  }
+
+  <ul class="user-list">
+    @for (user of users(); track user.id) {
+      <li>
+        <app-user
+          [user]="user"
+          [selected]="selectedUser()?.id === user.id"
+          (userClick)="onUserSelected($event)"
+        />
+      </li>
+    }
+  </ul>
+
+</main>

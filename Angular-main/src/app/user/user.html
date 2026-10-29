@@ -1,0 +1,10 @@
+<button
+  class="user-btn"
+  [class.selected]="selected()"
+  [attr.aria-pressed]="selected()"
+  type="button"
+  (click)="onUserClick()"
+>
+  <div class="user-avatar">{{ user().avatar }}</div>
+  <span class="user-name">{{ user().name }}</span>
+</button>

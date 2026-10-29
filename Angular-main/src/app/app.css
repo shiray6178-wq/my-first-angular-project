@@ -1,0 +1,42 @@
+.workspace {
+  display: flex;
+  align-items: stretch;
+  gap: 18px;
+  min-height: calc(100vh - 220px);
+  justify-content: flex-start;
+  padding: 28px;
+  background: #f3f5f9;
+  direction: ltr;
+}
+
+.user-list {
+  display: grid;
+  flex: 0 0 250px;
+  align-content: start;
+  gap: 8px;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid #e1e6ef;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(37, 54, 84, 0.06);
+  list-style: none;
+}
+
+.user-list li,
+.user-list app-user {
+  display: block;
+  min-width: 0;
+}
+
+@media (max-width: 640px) {
+  .workspace {
+    flex-direction: column;
+    padding: 16px;
+  }
+
+  .user-list {
+    flex: 0 0 auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
